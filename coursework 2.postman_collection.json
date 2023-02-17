@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "fd1a5378-fd1c-4e98-b557-9f2c8d6c91ea",
+		"name": "coursework 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25916953"
+	},
+	"item": [
+		{
+			"name": "getting lessons from mongo db",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "updating the orders",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n{\r\n\"name\":\"Ahmad\",\r\n\"phoneNumber\":900,\r\n\"lessonID\":3,\r\n\"space\":1\r\n}\r\n]\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3000/collection/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"collection",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

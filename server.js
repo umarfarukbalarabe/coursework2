@@ -66,7 +66,7 @@ app.put('/collection/:collectionName/:id',(req,res,next)=>{
             res.send(result.result.n ===1)?{'message':'Success'}:{'message':'Error'}
         }
     )
-})
+});
 
 // search
 app.get('/collection/:collectionName/search', (req, res, next) => {
@@ -78,8 +78,8 @@ app.get('/collection/:collectionName/search', (req, res, next) => {
         });
         res.send(newList)
     })
-})
-/*
+});
+
 
 // serving static files
    app.use((req,res,next)=>{
@@ -92,13 +92,13 @@ app.get('/collection/:collectionName/search', (req, res, next) => {
         if(fileInfo.isFile) res.send(filePath)
         else next()
     })
-})
+});
 
 //error handler
 app.use(function(req,res){
     res.status(404).send("File not found")
-})
-*/
+});
+
 app.listen(port,()=>{
     console.log("App started");
 })

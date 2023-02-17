@@ -46,15 +46,15 @@ app.get("/collection/:collectionName", (req, res, next)=>{
     });
 });
 
-/*
+
 //adding a post to save new order
 app.post('/collection/:collectionName',(req,res,next)=>{
     req.collection.insert(req.body,(e,results)=>{
         if(e) return next(e)
         res.send(results.ops)
     })
-})
-
+});
+/*
 // updating a collection object
 app.put('/collection/:collectionName/:id',(req,res,next)=>{
     req.collection.update(

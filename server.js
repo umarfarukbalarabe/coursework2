@@ -67,7 +67,7 @@ app.put('/collection/:collectionName/:id',(req,res,next)=>{
         }
     )
 })
-/*
+
 // search
 app.get('/collection/:collectionName/search', (req, res, next) => {
     let query_str = req.query.key_word
@@ -79,7 +79,7 @@ app.get('/collection/:collectionName/search', (req, res, next) => {
         res.send(newList)
     })
 })
-
+/*
 
 // serving static files
    app.use((req,res,next)=>{

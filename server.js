@@ -28,7 +28,23 @@ MongoClient.connect("mongodb+srv://umarfaruk:75488929@cluster0.kmxtkyp.mongodb.n
     db = client.db("coursework2");
 });
 app.use(express.static("./"));
+app.get('/',(req,res,next)=>{
+    res.send('Please select a collection e.g /collection/messages')
+})
 
+
+app.param("collectionName", (req, res, next, collectionName)=>{
+    req.collection = db.collection(collectionName);
+    return next();
+});
+
+
+app.get("/collection/:collectionName", (req, res, next)=>{
+    req.collection.find({}).toArray((e, results) => {
+        if (e) return next();
+        res.send(results);
+    });
+});
 
 /*
 //adding a post to save new order

@@ -54,7 +54,7 @@ app.post('/collection/:collectionName',(req,res,next)=>{
         res.send(results.ops)
     })
 });
-/*
+
 // updating a collection object
 app.put('/collection/:collectionName/:id',(req,res,next)=>{
     req.collection.update(
@@ -67,7 +67,7 @@ app.put('/collection/:collectionName/:id',(req,res,next)=>{
         }
     )
 })
-
+/*
 // search
 app.get('/collection/:collectionName/search', (req, res, next) => {
     let query_str = req.query.key_word
